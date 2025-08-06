@@ -1,0 +1,58 @@
+{
+area_code:
+null,
+asn:
+"AS54536",
+city:
+"Alamosa",
+country_code:
+"US",
+country_name:
+"United States",
+data:
+[
+0 80/tcp:
+{ … },
+1 443/tcp/PaperCut NG:
+{ … }
+],
+domains:
+[
+0:
+"adams.edu"
+],
+hostnames:
+[
+0:
+"srvprn1.ad.adams.edu",
+1:
+"adams.edu"
+],
+ip:
+3231483545,
+ip_str:
+"192.156.134.153",
+isp:
+"Adams State University",
+last_update:
+"2025-08-04T20:18:55.230909",
+latitude:
+37.46945,
+longitude:
+-105.87002,
+org:
+"Adams State University",
+os:
+null,
+ports:
+[
+0:
+80,
+1:
+443
+],
+region_code:
+"CO",
+tags:
+[]
+}
