@@ -1,54 +1,74 @@
-\# Alamosa Cyber Vulnerability Report
+\# Alamosa Vulnerability Report
 
 
 
-This repository documents publicly accessible vulnerabilities discovered in Alamosa, Colorado, including institutions like Adams State University.
+This project is a reconnaissance report of publicly exposed services in Alamosa, Colorado, with a special focus on institutions like Adams State University. Using OSINT tools like Shodan, this report documents potentially misconfigured or vulnerable public-facing services that could be of concern.
 
 
 
 \## Purpose
 
-\- Raise awareness of exposed services and potential risks.
 
-\- Encourage organizations to secure exposed infrastructure.
 
-\- Showcase local cyber research and reconnaissance skills.
+To raise awareness about publicly visible services and to demonstrate how security research can be conducted responsibly and transparently.
 
 
 
 \## Tools Used
 
+
+
 \- \[Shodan](https://www.shodan.io/)
 
+\- Python (for scripting, Shodan API)
 
+\- PowerShell / CLI
 
-\## Notable Findings
-
-\### Adams State University
-
-\- \*\*IP\*\*: 192.156.134.153  
-
-\- \*\*Open Ports\*\*: 80, 443  
-
-\- \*\*Exposed Web App\*\*: PaperCut NG  
-
-\- \*\*Concerns\*\*:
-
-&nbsp; - Accessible PaperCut login portal.
-
-&nbsp; - Uses older JavaScript libraries (jQuery 3.7.1, RequireJS).
-
-&nbsp; - No redirect or warning — server responds to web queries.
+\- Git + GitHub
 
 
 
-\_This repo is educational. No testing was performed beyond public enumeration.\_
+\## Focus Areas
 
 
 
-\## Contact
+\- Public IP exposure
 
-This report is part of an effort to raise local cybersecurity awareness. Contact info coming soon.
+\- Default credentials
+
+\- Open ports and services
+
+\- Expired SSL certificates
+
+\- Deprecated or vulnerable software
+
+
+
+\## Ethical Statement
+
+
+
+This report is generated using publicly available data. No unauthorized access, exploitation, or interference with services has taken place. All findings are intended to support cybersecurity awareness and responsible disclosure.
+
+
+
+\## Author
+
+
+
+Pascal Schaer  
+
+Cybersecurity student and researcher  
+
+\[github.com/PascalSchaer](https://github.com/PascalSchaer)
+
+
+
+\## Disclaimer
+
+
+
+This project is for educational and research purposes only.
 
 
 
