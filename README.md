@@ -52,15 +52,39 @@ This report is generated using publicly available data. No unauthorized access, 
 
 
 
+\## Notable Findings
+
+
+
+\### 🔎 PaperCut NG Exposure at Adams State University
+
+
+
+\- \*\*Discovered:\*\* August 2025
+
+\- \*\*Target:\*\* Adams State University (Alamosa, CO)
+
+\- \*\*Service:\*\* PaperCut NG login portal
+
+\- \*\*Port:\*\* 443 (HTTPS)
+
+\- \*\*Risk:\*\* Publicly exposed printing portal with no access control, which historically has had vulnerabilities (RCE, auth bypass)
+
+\- \*\*Action Taken:\*\* Findings documented and shared responsibly in \[report.md](./report.md)
+
+
+
 \## Author
 
 
 
-Pascal Schaer  
+Pascal Schaer
 
-Cybersecurity student and researcher  
+Cybersecurity student and researcher
 
 \[github.com/PascalSchaer](https://github.com/PascalSchaer)
+
+
 
 
 
@@ -69,6 +93,4 @@ Cybersecurity student and researcher
 
 
 This project is for educational and research purposes only.
-
-
 
