@@ -2,7 +2,7 @@ import os
 import csv
 import shodan
 
-API_KEY = os.getenv("SHODAN_API_KEY")  # Get API key from environment variable
+API_KEY = os.getenv("SHODAN_API_KEY")  # env variable for API key
 api = shodan.Shodan(API_KEY)
 
 ORG_LIST = [
