@@ -1,32 +1,53 @@
-## Finding: Exposed PaperCut NG Interface at Adams State University
+## Finding: Exposed PaperCut NG Interface – Adams State University
 
 **Date Discovered:** August 4, 2025  
 **IP Address:** 192.156.134.153  
 **Domain:** adams.edu  
 **Organization:** Adams State University  
 **Location:** Alamosa, Colorado  
-**Port:** 443 (HTTPS)  
-**Service:** PaperCut NG – Print Management Web Interface
+**Ports Open:** 80 (redirect), 443 (HTTPS)  
+**Service:** PaperCut NG 24.0 – Print Management Web Interface (srvprn1.ad.adams.edu)
 
-### Description:
-An instance of **PaperCut NG** was found publicly accessible over HTTPS with no login page obfuscation or rate-limiting mechanisms. The login interface exposes application metadata and session cookies, and it appears to be hosted without advanced protection such as WAF (Web Application Firewall).
+---
 
-### Risks:
-- Public exposure of an internal administrative service.
-- Possible exploitation of **known CVEs** related to PaperCut NG (e.g., RCE and auth bypass vulnerabilities if unpatched).
-- Could aid attackers in credential harvesting or lateral movement if breached.
+### Description
+A publicly accessible instance of PaperCut NG version 24.0 was identified via Shodan at Adams State University. The service is exposed over HTTPS with no access controls, such as VPN, IP filtering, or Web Application Firewall (WAF). The login page reveals session cookies and application metadata, and uses a certificate issued by Let's Encrypt, valid through July 20, 2025.
 
-### Evidence:
-- **Title:** PaperCut NG Login for Adams State University
-- **Cookie:** SESSIONID token observed
-- **SSL Cert:** Issued by Let's Encrypt, valid until July 20, 2025
-- **Ports Open:** 80 (redirect), 443 (HTTPS)
+The PaperCut NG software has historically been vulnerable to remote code execution (RCE) and authentication bypass vulnerabilities (e.g., CVE-2023-27350, CVE-2023-27351)—making unprotected public access a significant risk if the system is not fully patched.
 
-### Recommendations:
-- Immediately restrict access to the PaperCut NG interface using access control (IP whitelisting or VPN).
-- Ensure the PaperCut NG software is fully patched.
-- Implement login rate-limiting and obfuscation if public access is required.
-- Monitor and alert on any unauthorized access attempts.
+---
 
-### Notes:
-This finding is based on public Shodan data and does not include any active probing or exploitation. Responsible disclosure steps will be followed if applicable.
+### Risk Summary
+- Exposure of internal administrative software to the public internet  
+- Potential for exploitation of known PaperCut vulnerabilities if unpatched  
+- Disclosure of system metadata (cookies, software version, headers)  
+- Increased attacker reconnaissance capability  
+- Risk of credential harvesting, brute-force attacks, or lateral movement  
+
+---
+
+### Evidence
+- **Login Interface:** PaperCut NG 24.0 with institutional branding  
+- **SSL Certificate:** Issued by Let's Encrypt, expires July 20, 2025  
+- **Cookie Header:** SESSIONID token present  
+- **Shodan Metadata:** Identifies service, hostnames, and geolocation  
+
+---
+
+### Assets
+- `data/adams-state/raw/papercut-data.txt` – Raw Shodan response  
+- `data/adams-state/screenshots/papercut-login.png` – Screenshot of exposed login page  
+
+---
+
+### Recommendations
+- Restrict external access immediately via IP allowlisting, firewall rules, or VPN  
+- Verify PaperCut NG is fully patched and up to date  
+- Implement login hardening: CAPTCHA, rate-limiting, lockout after failed attempts  
+- Apply server hardening and enable WAF if public exposure is absolutely required  
+- Review access logs for any signs of unauthorized access  
+
+---
+
+### Notes
+This report is based on publicly available Shodan data. No active probing or exploitation was performed. Responsible disclosure steps will be followed if applicable.
