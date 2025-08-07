@@ -1,0 +1,18 @@
+$ svmap 205.189.99.50
++----------------------+--------------+
+| SIP Device           | User Agent   |
++----------------------+--------------+
+| 205.189.99.50:5060   | unknown      |
++----------------------+--------------+
+
+$ svwar 205.189.99.50
+ERROR:TakeASip:SIP server replied with an authentication request for an unknown extension. Set --force to force a scan.
+WARNING:root:found nothing
+
+$ svwar --force 205.189.99.50
+WARNING:TakeASip:We got an unknown response
+ERROR:TakeASip:Response: 'SIP/2.0 403 Forbidden\r\nFrom: "100"<sip:100@205.189.99.50>;tag=313030313032336353932353383\r\nTo: "100"<sip:100@205.189.99.50>;tag=zXcVbNmf467a8941\r\nCSeq: 1 REGISTER\r\nCall-ID: 904209973\r\nVia: SIP/2.0/UDP 127.0.0.1:5060;branch=z9hG4bK-1197941394;rport\r\nContent-Length: 0\r\n\r\n'
+
+WARNING:TakeASip:We got an unknown response
+ERROR:TakeASip:Response: 'SIP/2.0 403 Forbidden\r\nFrom: "101"<sip:101@205.189.99.50>;tag=313030313032336353932353370\r\nTo: "101"<sip:101@205.189.99.50>;tag=zXcVbNm6d0637f3f\r\nCSeq: 1 REGISTER\r\nCall-ID: 939134067\r\nVia: SIP/2.0/UDP 127.0.0.1:5060;branch=z9hG4bK-2216606832;rport\r\nContent-Length: 0\r\n\r\n'
+WARNING:root:found nothing

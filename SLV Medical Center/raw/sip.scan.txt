@@ -1,0 +1,18 @@
+Starting Nmap 7.94 ( https://nmap.org ) at 2025-08-06 16:02 MDT
+Nmap scan report for 205.189.99.50
+Host is up (0.042s latency).
+
+PORT     STATE         SERVICE
+5060/udp open|filtered sip
+| sip-methods: 
+|   Supported SIP Methods: 
+|     SIP/2.0 403 Forbidden
+|     From: <sip:nmap@mg> ;tag=root
+|     To: <sip:nmap@mg>;tag=zxcvbn098mnb0984e8
+|     CSeq: 42 OPTIONS
+|     Call-ID: 50000
+|     Via: SIP/2.0/UDP mg:branch=foo;port
+|     Content-Length: 0
+|_  
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 12.87 seconds

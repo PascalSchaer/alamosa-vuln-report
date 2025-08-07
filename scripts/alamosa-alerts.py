@@ -17,6 +17,7 @@ ORG_LIST = [
     "Alamosa County",
     "Jade Communications",
     "Conejos County Hospital",
+    "San Luis Valley Medical Center",
     "Rio Grande Hospital"
 ]
 

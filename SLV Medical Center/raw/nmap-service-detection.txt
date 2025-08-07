@@ -1,0 +1,15 @@
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-08-06 16:02 MDT
+Nmap scan report for 205.189.99.50
+Host is up (0.013s latency).
+
+PORT     STATE SERVICE VERSION
+5060/udp open  sip     (SIP end point; Status: 403 Forbidden)
+|_Service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint:
+SF-Port5060-UDP:V=7.95%I=7%D=8/6%Time=66893D106%P=x86_64-pc-linux-gnu%r(SIP
+SF:-Options,B8,"SIP/2.0\040403\040Forbidden\r\nFrom:\040<sip:nmap@mg> ;tag=ro
+SF:ot\r\nTo:\040<sip:nmap@mg>;tag=zxcvbn09ed3b4f5\r\nCSeq:\04042\040OPTIONS\r
+SF:\nCall-ID:\04050000\r\nVia:\040SIP/2.0/UDP\040mg;branch=foo;port\r\n
+SF:Content-Length:\0400\r\n\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 12.87 seconds
